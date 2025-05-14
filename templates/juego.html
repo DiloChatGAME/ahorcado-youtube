@@ -1,0 +1,37 @@
+<!-- templates/juego.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Juego del Ahorcado</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>🪢 Juego del Ahorcado</h1>
+
+  <p class="contador">⏳ Turno en: <span id="timer">30</span> segundos</p>
+
+  <p class="palabra">{{ palabra }}</p>
+  <p class="mensaje">{{ mensaje }}</p>
+
+  <h2>Marcador</h2>
+  <ul class="marcador">
+    {% for user, puntos in marcador %}
+      <li>{{ user }}: {{ puntos }}</li>
+    {% endfor %}
+  </ul>
+
+  <script>
+    let tiempo = 30;
+    const contador = document.getElementById('timer');
+
+    setInterval(() => {
+      tiempo--;
+      if (tiempo <= 0) {
+        tiempo = 30;
+      }
+      contador.textContent = tiempo;
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body {
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.palabra {
+  font-size: 3em;
+  letter-spacing: 0.2em;
+  margin-top: 20px;
+}
+
+.mensaje {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+.marcador {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.contador {
+  font-size: 2em;
+  color: #ffcc00;
+  margin-top: 10px;
+}
